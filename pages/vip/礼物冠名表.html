@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no">
+    <title>🎁礼物 / 冠名表🎁</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subpage.css">
+</head>
+<body>
+    <!-- 背景 -->
+    <div class="background">
+        <div class="background-image"></div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="main-wrapper">
+        <!-- 固定白色Header -->
+        <div class="subpage-header">
+            <div class="subpage-header-container">
+                <!-- 返回首页按钮 -->
+            <div class="back-home-wrapper">
+                <div class="back-home" onclick="window.location.href='../../index.html'" title="返回首页">
+                    <span>返回首页</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+
+        <!-- 页面内容 -->
+        <div class="page-content subpage-content">
+            <!-- 页面标题 -->
+            <div class="subpage-title-section">
+                <h1>🎁礼物 / 冠名表🎁</h1>
+            </div>
+
+            <!-- 标签页和内容区域 -->
+            <div class="tab-section">
+                <div class="tab-header">
+                    <div class="tab-item active">🎁礼物 / 冠名表🎁</div>
+                </div>
+                <div class="tab-content active">
+                    <div class="gift-images-grid">
+                        <div class="gift-image-item">
+                            <img src="../../images/礼物/XNPut4ZVkQ0jg0b4.png" alt="礼物1" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                        </div>
+                        <div class="gift-image-item">
+                            <img src="../../images/礼物/MrpMaNdRoc0jg0b4.png" alt="礼物2" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                        </div>
+                        <div class="gift-image-item">
+                            <img src="../../images/礼物/xiChzDNSDc0jg0b4.png" alt="礼物3" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                        </div>
+                        <div class="gift-image-item">
+                            <img src="../../images/礼物/bJLuSdhFeI0jg0b4.png" alt="礼物4" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                        </div>
+                        <div class="gift-image-item">
+                            <img src="../../images/礼物/3l8ptHuWRv0jg0b4.png" alt="礼物5" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                        </div>
+                        <div class="gift-image-item">
+                            <img src="../../images/礼物/g0d6F6kBGD0jg0b4.png" alt="礼物6" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                        </div>
+                        <div class="gift-image-item">
+                            <img src="../../images/礼物/aLV0PjBBGW0jg0b4.png" alt="礼物7" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                        </div>
+                        <div class="gift-image-item">
+                            <img src="../../images/礼物/CKg9wMk4z20jg0b4.png" alt="礼物8" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                        </div>
+                        <div class="gift-image-item">
+                            <img src="../../images/礼物/SlH2Ah5Lah0jg0b4.png" alt="礼物9" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 图片加载失败时显示占位符
+        document.addEventListener('DOMContentLoaded', function() {
+            // 处理所有图片
+            const images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                // 检查图片src是否存在
+                if (!img.src || img.src === window.location.href) {
+                    img.classList.add('image-placeholder');
+                    return;
+                }
+
+                img.addEventListener('error', function() {
+                    // 图片加载失败，添加占位符类
+                    this.classList.add('image-placeholder');
+                    this.style.display = 'none';
+                });
+                
+                img.addEventListener('load', function() {
+                    // 图片加载成功，移除占位符类
+                    this.classList.remove('image-placeholder');
+                    this.style.display = '';
+                });
+            });
+        });
+    </script>
+</body>

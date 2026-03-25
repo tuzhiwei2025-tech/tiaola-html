@@ -1,0 +1,604 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background-color: #050508;
+    color: #f9fafb;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 背景 */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://hb-v4-attachment-oss.huoban.com/attachment/736874394/0?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDwpKza4Yu8FVfieRyqt8iP8tsrqnrvvpc%26q-sign-time%3D1768036804%3B1768209664%26q-key-time%3D1768036804%3B1768209664%26q-header-list%3Dhost%26q-url-param-list%3Dresponse-content-disposition%26q-signature%3D3c915a6dcf17449ca1714f5d5080a3338414ad01&response-content-disposition=inline%3B%20filename%3D%22bg_7bc3301d.webp%22&imageMogr2/thumbnail/3000x3000%3E');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: brightness(0.4);
+}
+
+/* 主容器 */
+.main-wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+/* 返回首页按钮容器 */
+.back-home-container {
+    padding: 0 48px;
+    margin-bottom: 0;
+    display: block;
+    height: auto;
+}
+
+.back-home {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: none;
+    display: inline-block;
+    transition: opacity 0.2s ease;
+    line-height: 1.5;
+    height: auto;
+    font-weight: 400;
+}
+
+.back-home:hover {
+    opacity: 0.7;
+}
+
+.back-home:active {
+    opacity: 0.5;
+}
+
+/* 页面内容 */
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 标题图片区域 */
+.header-image-section {
+    margin-bottom: 24px;
+    text-align: center;
+    padding: 16px 0;
+}
+
+.header-image-container {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header-logo-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* 图片占位符 */
+    background-color: #f5f5f5;
+    min-height: 150px;
+    background-image: 
+        linear-gradient(45deg, #e8e8e8 25%, transparent 25%, transparent 75%, #e8e8e8 75%, #e8e8e8),
+        linear-gradient(45deg, #e8e8e8 25%, transparent 25%, transparent 75%, #e8e8e8 75%, #e8e8e8);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    object-fit: contain;
+}
+
+.header-logo-img[src]:not([src=""]) {
+    background-image: none;
+    min-height: auto;
+}
+
+/* 欢迎标题部分 */
+.welcome-section {
+    background-color: rgba(5, 5, 8, 0.92);
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border: 1px solid rgba(255, 105, 180, 0.35);
+}
+
+.welcome-section h1 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #fdf2ff;
+    line-height: 1.4;
+}
+
+.welcome-section p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #e5e7eb;
+    line-height: 25.6px;
+}
+
+.welcome-section strong {
+    font-weight: 600;
+}
+
+.welcome-section p:last-child strong {
+    color: #050508;
+    background-color: #ff69b4;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* 卡片区域 */
+.card-section {
+    background-color: rgba(10, 10, 16, 0.96);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.card-section:first-of-type {
+    background-color: rgba(10, 10, 16, 0.96);
+}
+
+.card-header {
+    padding: 12px 24px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.28);
+    text-align: center;
+}
+
+.card-header h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fbcfe8;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.card-content {
+    padding: 24px;
+}
+
+/* 菜单网格 */
+/* 菜单网格容器 */
+.menu-grid {
+    padding: 4px 0px;
+    width: 100%;
+}
+
+.menu-grid .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 当menu-grid在card-content中时，移除card-content的padding */
+.card-content:has(.menu-grid) {
+    padding: 0;
+}
+
+.menu-item {
+    width: 120px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+    cursor: pointer;
+    transition: transform 0.2s;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item:hover {
+    transform: translateY(-2px);
+}
+
+.menu-item-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    /* 图片占位符 - 如果图片未加载，显示背景色 */
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* 图片加载失败时的占位符 */
+.menu-item-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e8e8e8;
+    background-image: 
+        linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5),
+        linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+}
+
+/* 当背景图片不存在时显示占位符 */
+.menu-item-image:not([style*="background-image"]),
+.menu-item-image[style*="background-image: none"],
+.menu-item-image.bg-image-error {
+    background-color: #e8e8e8 !important;
+}
+
+.menu-item-image:not([style*="background-image"])::before,
+.menu-item-image[style*="background-image: none"]::before,
+.menu-item-image.bg-image-error::before {
+    opacity: 1;
+}
+
+.menu-item-image.bg-image-error::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23999"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>') no-repeat center;
+    background-size: contain;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.menu-item-text {
+    font-size: 12px;
+    line-height: 16px;
+    color: #fecdd3;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+/* 全宽图片 */
+.card-image-full {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+/* 底部 */
+.footer {
+    background-color: rgba(15, 23, 42, 0.96);
+    padding: 20px;
+    text-align: center;
+    margin-top: 48px;
+    border-radius: 8px;
+}
+
+.footer-section {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: rgba(249, 250, 251, 0.7);
+}
+
+.footer-section:last-child {
+    margin-bottom: 0;
+}
+
+.footer-weaken {
+    color: rgba(148, 163, 184, 0.85);
+}
+
+.footer-emphasize {
+    margin: 0 4px;
+}
+
+.footer-emphasize a {
+    color: #fb7185;
+    text-decoration: none;
+}
+
+.footer-emphasize a:hover {
+    text-decoration: underline;
+}
+
+/* 桌面统一收缩：所有模块在电脑端先缩一档 */
+@media (min-width: 1024px) {
+    .page-content {
+        max-width: 1040px;
+        padding: 20px 14px 24px;
+    }
+
+    .header-image-section {
+        margin-top: 6px;
+        margin-bottom: 18px;
+        padding: 10px 0;
+    }
+
+    .header-logo-img {
+        max-width: 100%;
+    }
+
+    .welcome-section {
+        padding: 22px;
+        margin-bottom: 18px;
+    }
+
+    .welcome-section h1 {
+        font-size: 25px;
+    }
+
+    .welcome-section p {
+        font-size: 15px;
+        line-height: 1.55;
+        margin-bottom: 10px;
+    }
+
+    .card-section {
+        margin-bottom: 18px;
+    }
+
+    .card-header {
+        padding: 12px 20px;
+    }
+
+    .card-header h2 {
+        font-size: 17px;
+    }
+
+    .menu-grid .content {
+        gap: 6px;
+        padding: 8px 14px;
+    }
+
+    .menu-item {
+        width: 104px;
+        height: 124px;
+    }
+
+    .menu-item-image {
+        width: 82px;
+        height: 82px;
+    }
+
+    .menu-item-text {
+        font-size: 11px;
+        line-height: 14px;
+        margin-top: 8px;
+    }
+}
+
+/* 大屏优化：避免内容在宽屏上显得过大 */
+@media (min-width: 1600px) {
+    .page-content {
+        max-width: 1080px;
+        padding-top: 40px;
+    }
+
+    .header-image-section {
+        margin-top: 8px;
+        margin-bottom: 24px;
+        padding: 12px 0;
+    }
+
+    .header-logo-img {
+        max-width: 100%;
+    }
+
+    .welcome-section {
+        padding: 24px;
+    }
+
+    .welcome-section h1 {
+        font-size: 26px;
+    }
+
+    .welcome-section p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .card-header h2 {
+        font-size: 17px;
+    }
+
+    .card-header {
+        padding: 16px 24px;
+    }
+
+    .menu-grid .content {
+        gap: 6px;
+        padding: 8px 16px;
+    }
+
+    .menu-item {
+        width: 108px;
+        height: 128px;
+    }
+
+    .menu-item-image {
+        width: 84px;
+        height: 84px;
+    }
+
+    .menu-item-text {
+        font-size: 11px;
+        line-height: 14px;
+        margin-top: 8px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .page-content {
+        max-width: 980px;
+        padding-top: 48px;
+    }
+
+    .header-logo-img {
+        max-width: 100%;
+    }
+
+    .header-image-section {
+        margin-top: 12px;
+        margin-bottom: 28px;
+    }
+
+    .card-header {
+        padding: 18px 24px;
+    }
+
+    .menu-item {
+        width: 100px;
+        height: 120px;
+    }
+
+    .menu-item-image {
+        width: 76px;
+        height: 76px;
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 16px 12px;
+    }
+
+    .welcome-section {
+        padding: 24px 16px;
+    }
+
+    .welcome-section h1 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .welcome-section p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .menu-grid {
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .menu-item {
+        width: 100px;
+        height: 120px;
+    }
+
+    .menu-item-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu-item-text {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    .card-content {
+        padding: 16px;
+    }
+
+    .card-header h2 {
+        font-size: 16px;
+    }
+
+    .header-logo-img {
+        min-height: 120px;
+    }
+
+    .card-image-full {
+        min-height: 150px;
+    }
+}
+
+/* 卡片背景样式 - 护航单部分 */
+.card-section:first-of-type .card-content {
+    padding: 24px;
+}
+
+.card-image-full {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 菜单项圆形图片优化 */
+.menu-item:hover .menu-item-image {
+    transform: scale(1.05);
+}
+
+/* 图片占位符完整样式 */
+.menu-item-image.bg-image-error {
+    background-color: #e8e8e8 !important;
+    background-image: 
+        linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5),
+        linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5) !important;
+    background-size: 20px 20px !important;
+    background-position: 0 0, 10px 10px !important;
+}
+
+.menu-item-image:not([style*="background-image"]) {
+    background-color: #e8e8e8 !important;
+    background-image: 
+        linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5),
+        linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5) !important;
+    background-size: 20px 20px !important;
+    background-position: 0 0, 10px 10px !important;
+}
+
+.header-logo-img.image-placeholder,
+.card-image-full.image-placeholder {
+    background-color: #f5f5f5 !important;
+    background-image: 
+        linear-gradient(45deg, #e8e8e8 25%, transparent 25%, transparent 75%, #e8e8e8 75%, #e8e8e8),
+        linear-gradient(45deg, #e8e8e8 25%, transparent 25%, transparent 75%, #e8e8e8 75%, #e8e8e8) !important;
+    background-size: 20px 20px !important;
+    background-position: 0 0, 10px 10px !important;
+}
+

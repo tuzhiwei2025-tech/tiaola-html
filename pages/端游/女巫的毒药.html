@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no">
+    <title>女巫的毒药</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subpage.css">
+</head>
+<body>
+    <div class="background">
+        <div class="background-image"></div>
+    </div>
+    <div class="main-wrapper">
+        <div class="subpage-header">
+            <div class="subpage-header-container">
+                <div class="back-home-wrapper">
+                    <div class="back-home" onclick="window.location.href='../../index.html'" title="返回首页">
+                        <span>返回首页</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-content subpage-content">
+            <div class="subpage-title-section">
+                <h1>女巫的毒药</h1>
+            </div>
+            <div class="tab-section">
+                <div class="tab-header">
+                    <div class="tab-item active">🔴女巫的毒药</div>
+                </div>
+                <div class="tab-content active">
+                    <div class="content-image">
+                        <img src="../../images/菜单/各项价格表/女巫的毒药/女巫的毒药.png" alt="女巫的毒药" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                if (!img.src || img.src === window.location.href) {
+                    img.classList.add('image-placeholder');
+                    return;
+                }
+                img.addEventListener('error', function() {
+                    this.classList.add('image-placeholder');
+                    this.style.display = 'none';
+                });
+                img.addEventListener('load', function() {
+                    this.classList.remove('image-placeholder');
+                    this.style.display = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

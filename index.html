@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主菜单</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 背景 -->
+    <div class="background">
+        <div class="background-image"></div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="main-wrapper">
+        <!-- 页面内容 -->
+        <div class="page-content">
+            <!-- 顶部标题图片 -->
+            <div class="header-image-section">
+                <div class="header-image-container">
+                    <img src="images/main/home.png" alt="跳拉" class="header-logo-img" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                </div>
+            </div>
+
+            <!-- 欢迎标题部分 -->
+            <div class="welcome-section">
+                <h1>欢迎老板光临跳拉</h1>
+                <p>大神护航/猛男甜妹/优质售后/纯绿打手</p>
+                <p>食用导航</p>
+                <p>板块1：跳拉【<strong>端游</strong>】所有项目价目表</p>
+                <p>板块2：跳拉充值预存  /  礼物冠名</p>
+                <p>板块3：跳拉护航老板点单须知</p>
+            </div>
+
+            <!-- 端游价格表 + 活动专区（统一在端游模块） -->
+            <div class="card-section">
+                <div class="card-header">
+                    <h2>1️⃣ 【端 游】各 项 价 格 表（含活动）</h2>
+                </div>
+                <div class="card-content">
+                    <div class="menu-grid">
+                        <div class="content">
+                            <div class="menu-item" onclick="window.location.href='pages/端游/陪玩价格表.html'">
+                                <div class="menu-item-image" style="background-image: url('images/端游/陪玩价格表.jpg')"></div>
+                                <div class="menu-item-text">陪玩价格表</div>
+                            </div>
+                            <!-- <div class="menu-item" onclick="window.location.href='pages/端游/护航单.html'">
+                                <div class="menu-item-image" style="background-image: url('images/端游/护航单.jpg')"></div>
+                                <div class="menu-item-text">护航单</div>
+                            </div> -->
+                            <div class="menu-item" onclick="window.location.href='pages/端游/不出一直打.html'">
+                                <div class="menu-item-image" style="background-image: url('images/menu/活动优惠单.png')"></div>
+                                <div class="menu-item-text">不出一直打</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/趣味单.html'">
+                                <div class="menu-item-image" style="background-image: url('images/端游/趣味单.jpg')"></div>
+                                <div class="menu-item-text">趣味单</div>
+                            </div>
+                            <!-- 以下为按头像排序的活动 -->
+                            <div class="menu-item" onclick="window.location.href='pages/端游/bingo单.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/bingo单.png')"></div>
+                                <div class="menu-item-text">bingo单</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/霸凌新干员.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/霸凌新干员.png')"></div>
+                                <div class="menu-item-text">霸凌新干员</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/老板拯救.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/老板拯救.png')"></div>
+                                <div class="menu-item-text">老板拯救</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/红红全家桶.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/红红全家桶.png')"></div>
+                                <div class="menu-item-text">红红全家桶</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/护航单.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/护航单.png')"></div>
+                                <div class="menu-item-text">护航单</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/姜饼人.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/姜饼人.png')"></div>
+                                <div class="menu-item-text">姜饼人</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/禁字决.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/禁字决.png')"></div>
+                                <div class="menu-item-text">禁字决</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/就吃亿点.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/就吃亿点.png')"></div>
+                                <div class="menu-item-text">就吃亿点</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/连中三元.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/连中三元.png')"></div>
+                                <div class="menu-item-text">连中三元</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/零元购.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/零元购.png')"></div>
+                                <div class="menu-item-text">零元购</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/猛攻单.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/猛攻单.png')"></div>
+                                <div class="menu-item-text">猛攻单</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/摸红香香手.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/摸红香香手.png')"></div>
+                                <div class="menu-item-text">摸红香香手</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/女巫的毒药.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/女巫的毒药.png')"></div>
+                                <div class="menu-item-text">女巫的毒药</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/陪玩单.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/陪玩单.png')"></div>
+                                <div class="menu-item-text">陪玩单</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/枪皮代肝.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/枪皮代肝.png')"></div>
+                                <div class="menu-item-text">枪皮代肝</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/人头对冲.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/人头对冲.png')"></div>
+                                <div class="menu-item-text">人头对冲</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/沙色保险.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/沙色保险.png')"></div>
+                                <div class="menu-item-text">沙色保险</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/四色卡单.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/四色卡单.png')"></div>
+                                <div class="menu-item-text">四色卡单</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/我要验牌.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/我要验牌.png')"></div>
+                                <div class="menu-item-text">我要验牌</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/小狗单.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/小狗单.png')"></div>
+                                <div class="menu-item-text">小狗单</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/悬赏令.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/悬赏令.png')"></div>
+                                <div class="menu-item-text">悬赏令</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/血战到底.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/血战到底.png')"></div>
+                                <div class="menu-item-text">血战到底</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/勇敢者行动.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/勇敢者行动.png')"></div>
+                                <div class="menu-item-text">勇敢者行动</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/争分夺秒.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/争分夺秒.png')"></div>
+                                <div class="menu-item-text">争分夺秒</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/指定摸红单.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/指定摸红单.png')"></div>
+                                <div class="menu-item-text">指定摸红单</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/周限定单.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/周限定单.png')"></div>
+                                <div class="menu-item-text">周限定单</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/端游/追杀赛伊德.html'">
+                                <div class="menu-item-image" style="background-image: url('images/网站icon/追杀赛伊德.png')"></div>
+                                <div class="menu-item-text">追杀赛伊德</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIP和礼物单 -->
+            <div class="card-section">
+                <div class="card-header">
+                    <h2>2️⃣ vip 预存福利 / 陪玩礼物单</h2>
+                </div>
+                <div class="card-content">
+                    <div class="menu-grid">
+                        <div class="content">
+                            <div class="menu-item" onclick="window.location.href='pages/vip/vip预存福利表.html'">
+                                <div class="menu-item-image" style="background-image: url('images/menu/vip预存福利表.png')"></div>
+                                <div class="menu-item-text">充值预存</div>
+                            </div>
+                            <div class="menu-item" onclick="window.location.href='pages/vip/礼物冠名表.html'">
+                                <div class="menu-item-image" style="background-image: url('images/menu/礼物冠名表.png')"></div>
+                                <div class="menu-item-text">🎁礼物赠送🎁</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 护航单老板权益 -->
+            <div class="card-section">
+                <div class="card-header">
+                    <h2>3️⃣护航单老板权益 必看！！</h2>
+                </div>
+                <div class="card-content">
+                    <img src="images/菜单/老板须知/老板须知正式.png" alt="护航单" class="card-image-full" onerror="this.onerror=null; this.classList.add('image-placeholder'); this.style.display='none';">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // 图片加载失败时显示占位符
+        document.addEventListener('DOMContentLoaded', function() {
+            // 处理所有普通图片
+            const images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                // 检查图片src是否存在
+                if (!img.src || img.src === window.location.href) {
+                    img.classList.add('image-placeholder');
+                    return;
+                }
+
+                img.addEventListener('error', function() {
+                    // 图片加载失败，添加占位符类
+                    this.classList.add('image-placeholder');
+                    this.style.display = 'none';
+                });
+                
+                img.addEventListener('load', function() {
+                    // 图片加载成功，移除占位符类
+                    this.classList.remove('image-placeholder');
+                    this.style.display = '';
+                });
+            });
+
+            // 处理背景图片（菜单项圆形图标）
+            const bgImages = document.querySelectorAll('.menu-item-image[style*="background-image"]');
+            bgImages.forEach(function(element) {
+                const bgUrl = element.style.backgroundImage;
+                if (bgUrl && bgUrl !== 'none' && bgUrl !== '') {
+                    // 提取URL
+                    const urlMatch = bgUrl.match(/url\(["']?(.*?)["']?\)/);
+                    if (urlMatch && urlMatch[1]) {
+                        const img = new Image();
+                        img.onerror = function() {
+                            // 背景图片加载失败，尝试使用备用URL
+                            const fallbackUrl = element.getAttribute('data-fallback');
+                            if (fallbackUrl) {
+                                element.style.backgroundImage = `url('${fallbackUrl}')`;
+                                // 再次尝试加载备用URL
+                                const fallbackImg = new Image();
+                                fallbackImg.onerror = function() {
+                                    element.classList.add('bg-image-error');
+                                    element.style.backgroundImage = 'none';
+                                };
+                                fallbackImg.onload = function() {
+                                    element.classList.remove('bg-image-error');
+                                };
+                                fallbackImg.src = fallbackUrl;
+                            } else {
+                                element.classList.add('bg-image-error');
+                                element.style.backgroundImage = 'none';
+                            }
+                        };
+                        img.onload = function() {
+                            // 背景图片加载成功
+                            element.classList.remove('bg-image-error');
+                        };
+                        // 清理URL，移除可能的参数和引号
+                        let cleanUrl = urlMatch[1].replace(/^["']|["']$/g, '');
+                        img.src = cleanUrl;
+                    }
+                } else {
+                    // 没有背景图片，尝试使用备用URL
+                    const fallbackUrl = element.getAttribute('data-fallback');
+                    if (fallbackUrl) {
+                        element.style.backgroundImage = `url('${fallbackUrl}')`;
+                    } else {
+                        // 显示占位符
+                        element.classList.add('bg-image-error');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+/* 子页面固定白色Header */
+.subpage-header {
+    position: sticky;
+    top: 0;
+    background-color: #050508;
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+    padding: 16px 48px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 64px;
+}
+
+.subpage-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* 子页面样式 */
+.subpage-content {
+    padding: 24px 48px 24px 48px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 子页面返回首页按钮容器 */
+.back-home-wrapper {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+/* 返回首页按钮 - 深色背景下的统一胶囊样式 */
+.back-home {
+    display: inline-block;
+    padding: 9px 28px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0b0b10;
+    background: linear-gradient(135deg, #ff85c8 0%, #ff4fa3 45%, #ff9ad5 100%);
+    border: 1px solid rgba(248, 113, 150, 0.85);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    line-height: 1.4;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+    min-width: 112px;
+    height: auto;
+}
+
+.back-home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 0% 0%, rgba(251, 113, 133, 0.9), transparent 55%),
+                radial-gradient(circle at 100% 100%, rgba(244, 63, 94, 0.9), transparent 55%);
+    pointer-events: none;
+    opacity: 0.12;
+    border-radius: inherit;
+}
+
+.back-home:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.75);
+    background: linear-gradient(135deg, #ff9ad5 0%, #ff4fa3 40%, #ff85c8 100%);
+}
+
+.back-home:hover::before {
+    opacity: 0.22;
+}
+
+.back-home:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.back-home span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    color: #050508;
+    font-weight: 600;
+}
+
+.subpage-title-section {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    margin: 0 0 24px 0;
+    box-shadow: none;
+    text-align: center;
+    width: 100%;
+}
+
+.subpage-title-section h1 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #fdf2ff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* 标签页样式 */
+.tab-section {
+    background-color: transparent;
+    border-radius: 0;
+    margin: 0 0 0 0;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.tab-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.tab-item {
+    padding: 0;
+    font-size: 14px;
+    color: #fecdd3;
+    cursor: pointer;
+    border-bottom: 3px solid #ff69b4;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    width: auto;
+}
+
+.tab-item.active {
+    color: #fdf2ff;
+    border-bottom-color: #ff69b4;
+    border-bottom-width: 3px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.tab-item:hover {
+    color: #ffe4f1;
+    opacity: 0.8;
+}
+
+.tab-content {
+    display: none;
+    padding: 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.content-image {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.content-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    /* 图片占位符 */
+    background-color: #f5f5f5;
+    min-height: 300px;
+    background-image: 
+        linear-gradient(45deg, #e8e8e8 25%, transparent 25%, transparent 75%, #e8e8e8 75%, #e8e8e8),
+        linear-gradient(45deg, #e8e8e8 25%, transparent 25%, transparent 75%, #e8e8e8 75%, #e8e8e8);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    object-fit: contain;
+    position: relative;
+}
+
+.content-image img[src]:not([src=""]) {
+    background-image: none;
+    min-height: auto;
+}
+
+.content-image img.image-placeholder {
+    background-color: #f5f5f5 !important;
+    background-image: 
+        linear-gradient(45deg, #e8e8e8 25%, transparent 25%, transparent 75%, #e8e8e8 75%, #e8e8e8),
+        linear-gradient(45deg, #e8e8e8 25%, transparent 25%, transparent 75%, #e8e8e8 75%, #e8e8e8) !important;
+    background-size: 20px 20px !important;
+    background-position: 0 0, 10px 10px !important;
+}
+
+.content-image {
+    position: relative;
+    min-height: 300px;
+}
+
+.content-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.content-image:has(img.image-placeholder)::after {
+    content: '图片未加载';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #999;
+    white-space: nowrap;
+    z-index: 2;
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* 礼物图片网格布局 - 统一3列布局 */
+.gift-images-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.gift-image-item {
+    width: 100%;
+    overflow: visible;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gift-image-item:hover {
+    box-shadow: none;
+}
+
+.gift-image-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.gift-image-item:hover img {
+    transform: none;
+}
+
+.gift-image-item img.image-placeholder {
+    background-color: #f5f5f5;
+    background-image: 
+        linear-gradient(45deg, #e8e8e8 25%, transparent 25%, transparent 75%, #e8e8e8 75%, #e8e8e8),
+        linear-gradient(45deg, #e8e8e8 25%, transparent 25%, transparent 75%, #e8e8e8 75%, #e8e8e8);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+
+.gift-image-item:has(img.image-placeholder)::after {
+    content: '图片未加载';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #999;
+    white-space: nowrap;
+    z-index: 2;
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* 桌面统一收缩：端游/VIP 子页在电脑端先缩一档 */
+@media (min-width: 1024px) {
+    .subpage-header {
+        height: 60px;
+        padding: 12px 40px;
+    }
+
+    .subpage-header-container {
+        max-width: 1040px;
+    }
+
+    .subpage-content {
+        max-width: 1040px;
+        padding: 20px 40px 24px;
+    }
+
+    .subpage-title-section {
+        margin-bottom: 20px;
+    }
+
+    .subpage-title-section h1 {
+        font-size: 24px;
+    }
+
+    .tab-header {
+        margin-bottom: 12px;
+    }
+
+    .tab-item {
+        font-size: 13px;
+    }
+
+    .content-image img {
+        max-width: 100%;
+    }
+
+    .gift-images-grid {
+        max-width: 1040px;
+        gap: 16px;
+    }
+}
+
+/* 大屏优化：端游页面在宽屏上更紧凑 */
+@media (min-width: 1600px) {
+    .subpage-header {
+        height: 72px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .subpage-header-container {
+        max-width: 1080px;
+    }
+
+    .subpage-content {
+        max-width: 1080px;
+        padding-top: 32px;
+    }
+
+    .subpage-title-section h1 {
+        font-size: 24px;
+    }
+
+    .subpage-title-section {
+        margin-bottom: 28px;
+    }
+
+    .tab-header {
+        margin-bottom: 12px;
+    }
+
+    .tab-item {
+        font-size: 13px;
+    }
+
+    .content-image img {
+        max-width: 100%;
+    }
+
+    .gift-images-grid {
+        max-width: 1080px;
+        gap: 16px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .subpage-header {
+        height: 76px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .subpage-header-container {
+        max-width: 980px;
+    }
+
+    .subpage-content {
+        max-width: 980px;
+        padding-top: 36px;
+    }
+
+    .content-image img {
+        max-width: 100%;
+    }
+
+    .gift-images-grid {
+        max-width: 980px;
+    }
+
+    .subpage-title-section {
+        margin-bottom: 30px;
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .subpage-header {
+        padding: 12px 16px;
+        height: auto;
+        min-height: 56px;
+    }
+
+    .subpage-header-container {
+        padding: 0;
+    }
+
+    .subpage-content {
+        padding: 0 16px 24px 16px;
+    }
+
+    .subpage-title-section {
+        padding: 16px 0 0 0;
+        margin: 0 0 20px 0;
+    }
+
+    .subpage-title-section h1 {
+        font-size: 24px;
+    }
+
+    .tab-header {
+        padding: 0;
+        margin: 0 0 16px 0;
+        justify-content: center;
+    }
+
+    .tab-item {
+        font-size: 13px;
+        white-space: nowrap;
+        margin: 0;
+    }
+
+    .tab-content {
+        padding: 0;
+    }
+
+    /* 图片在移动端自适应 */
+    .content-image {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .content-image img {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* 返回首页按钮在移动端适配 */
+    .back-home {
+        padding: 8px 20px;
+        font-size: 13px;
+        min-width: 100px;
+    }
+
+    /* 礼物图片网格在移动端的响应式布局 */
+    .gift-images-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .subpage-header {
+        padding: 10px 12px;
+        min-height: 52px;
+    }
+
+    .subpage-content {
+        padding: 0 12px 20px 12px;
+    }
+
+    .subpage-title-section h1 {
+        font-size: 20px;
+    }
+
+    .tab-item {
+        font-size: 12px;
+    }
+
+    .back-home {
+        padding: 6px 16px;
+        font-size: 12px;
+        min-width: 90px;
+    }
+
+    .content-image img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gift-images-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
