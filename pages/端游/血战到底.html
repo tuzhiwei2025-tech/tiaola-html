@@ -2,7 +2,13 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://hb-v4-attachment-oss.huoban.com">
+    <link rel="preload" as="image" fetchpriority="low" href="https://hb-v4-attachment-oss.huoban.com/attachment/736874394/0?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDwpKza4Yu8FVfieRyqt8iP8tsrqnrvvpc%26q-sign-time%3D1768036804%3B1768209664%26q-key-time%3D1768036804%3B1768209664%26q-header-list%3Dhost%26q-url-param-list%3Dresponse-content-disposition%26q-signature%3D3c915a6dcf17449ca1714f5d5080a3338414ad01&amp;response-content-disposition=inline%3B%20filename%3D%22bg_7bc3301d.webp%22&amp;imageMogr2/thumbnail/3000x3000%3E">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no">
+    <link rel="preload" href="../../css/style.css" as="style">
+    <link rel="preload" href="../../css/subpage.css" as="style">
+    <link rel="preload" as="image" fetchpriority="high" href="../../images/菜单/各项价格表/血战到底/血战到底.png">
+
     <title>血战到底</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/subpage.css">
@@ -31,30 +37,12 @@
                 </div>
                 <div class="tab-content active">
                     <div class="content-image">
-                        <img src="../../images/菜单/各项价格表/血战到底/血战到底.png" alt="血战到底" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
+                        <img fetchpriority="high" decoding="async" src="../../images/菜单/各项价格表/血战到底/血战到底.png" alt="血战到底" onerror="this.classList.add('image-placeholder'); this.style.display='none';">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img');
-            images.forEach(function(img) {
-                if (!img.src || img.src === window.location.href) {
-                    img.classList.add('image-placeholder');
-                    return;
-                }
-                img.addEventListener('error', function() {
-                    this.classList.add('image-placeholder');
-                    this.style.display = 'none';
-                });
-                img.addEventListener('load', function() {
-                    this.classList.remove('image-placeholder');
-                    this.style.display = '';
-                });
-            });
-        });
-    </script>
+    <script src="../../js/image-fallback.js" defer></script>
 </body>
 </html>

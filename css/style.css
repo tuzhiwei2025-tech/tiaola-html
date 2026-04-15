@@ -26,11 +26,15 @@ body {
 .background-image {
     width: 100%;
     height: 100%;
+    /* 与 index / 各子页 head 中 preload 的 URL 保持一致，便于浏览器提前建立缓存 */
     background-image: url('https://hb-v4-attachment-oss.huoban.com/attachment/736874394/0?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDwpKza4Yu8FVfieRyqt8iP8tsrqnrvvpc%26q-sign-time%3D1768036804%3B1768209664%26q-key-time%3D1768036804%3B1768209664%26q-header-list%3Dhost%26q-url-param-list%3Dresponse-content-disposition%26q-signature%3D3c915a6dcf17449ca1714f5d5080a3338414ad01&response-content-disposition=inline%3B%20filename%3D%22bg_7bc3301d.webp%22&imageMogr2/thumbnail/3000x3000%3E');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     filter: brightness(0.4);
+    /* 固定层提升合成，减少重绘时主内容区受影响 */
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 /* 主容器 */
@@ -239,6 +243,18 @@ body {
     flex-shrink: 0;
 }
 
+/* 菜单圆形图标：用 img + lazy 替代 background，减少首屏并发与重复解码 */
+.menu-item-image .menu-item-thumb {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 1;
+    display: block;
+}
+
 /* 图片加载失败时的占位符 */
 .menu-item-image::before {
     content: '';
@@ -258,14 +274,14 @@ body {
     transition: opacity 0.3s;
 }
 
-/* 当背景图片不存在时显示占位符 */
-.menu-item-image:not([style*="background-image"]),
+/* 当背景图片不存在时显示占位符（含 <img class="menu-item-thumb"> 的项由图片盖住，不显示空态纹理） */
+.menu-item-image:not([style*="background-image"]):not(:has(.menu-item-thumb)),
 .menu-item-image[style*="background-image: none"],
 .menu-item-image.bg-image-error {
     background-color: #e8e8e8 !important;
 }
 
-.menu-item-image:not([style*="background-image"])::before,
+.menu-item-image:not([style*="background-image"]):not(:has(.menu-item-thumb))::before,
 .menu-item-image[style*="background-image: none"]::before,
 .menu-item-image.bg-image-error::before {
     opacity: 1;
@@ -583,7 +599,7 @@ body {
     background-position: 0 0, 10px 10px !important;
 }
 
-.menu-item-image:not([style*="background-image"]) {
+.menu-item-image:not([style*="background-image"]):not(:has(.menu-item-thumb)) {
     background-color: #e8e8e8 !important;
     background-image: 
         linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5),
